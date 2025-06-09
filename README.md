@@ -2,7 +2,7 @@
 
 Este proyecto contiene una imagen **Docker unificada** lista para levantar un servidor privado de **Diablo II: LoD 1.14d**, que combina:
 
-- **PvPGN** para autenticaciÛn, chat y lobby estilo Battle.net
+- **PvPGN** para autenticaci√≥n, chat y lobby estilo Battle.net
 - **D2GS** como servidor de juego real
 - **Wine** (2.0.1) preconfigurado para correr D2GS en Linux
 
@@ -12,48 +12,48 @@ Ideal para LAN parties, servidores privados entre amigos, o simplemente para rev
 
 ## Componentes
 
-- **PvPGN** (`bnetd`) compilado y adaptado para compatibilidad con la versiÛn 1.14d
+- **PvPGN** (`bnetd`) compilado y adaptado para compatibilidad con la versi√≥n 1.14d
 - **D2GS** funcional sobre Wine (sin necesidad de Windows)
 - **Docker** como entorno contenedor con un `entrypoint` personalizado
-- Scripts autom·ticos para reemplazo de configuraciones vÌa `.env`
-- InicializaciÛn autom·tica de carpetas `logs`, `etc`, `var` y creaciÛn de archivos de log si no existen
-- Script opcional `copyConfFromContainer.sh` para validar cÛmo quedaron configurados los archivos dentro del contenedor despuÈs de iniciado
+- Scripts autom√°ticos para reemplazo de configuraciones v√≠a `.env`
+- Inicializaci√≥n autom√°tica de carpetas `logs`, `etc`, `var` y creaci√≥n de archivos de log si no existen
+- Script opcional `copyConfFromContainer.sh` para validar c√≥mo quedaron configurados los archivos dentro del contenedor despu√©s de iniciado
 
 ---
 
 ## Requisitos
 
-- Docker instalado (versiÛn 20 o superior recomendada)
+- Docker instalado (versi√≥n 20 o superior recomendada)
 - Git (opcional, para clonar el repositorio)
 - Archivo `.env` con tus configuraciones de red y realm
 
 ---
 
-## CÛmo usar
+## C√≥mo usar
 
-1. **Clon· este repositorio:**
+1. **Clon√° este repositorio:**
 
 ```bash
 git clone https://github.com/gonzacass/diablo2-server.git
 cd diablo2-server
 ```
 
-2. **Cre· tu archivo `.env` desde el ejemplo:**
+2. **Cre√° tu archivo `.env` desde el ejemplo:**
 
 ```bash
 cp .env_example .env
 ```
 
-> Si no ves el archivo `.env_example`, asegurate de descargarlo desde el repositorio o crearlo manualmente seg˙n el formato a continuaciÛn.
+> Si no ves el archivo `.env_example`, asegurate de descargarlo desde el repositorio o crearlo manualmente seg√∫n el formato a continuaci√≥n.
 
-3. **Edit· `.env` y complet· tus datos:**
+3. **Edit√° `.env` y complet√° tus datos:**
 
 ```dotenv
 # Archivo: .env_example
 
 # Configuraciones de red
 IP_PRIVADA=          # Ej: 192.168.0.100
-IP_PUBLICA=          # Tu IP p˙blica o del host
+IP_PUBLICA=          # Tu IP p√∫blica o del host
 SUBNET=              # Ej: 192.168.0.0/24
 
 # Realm
@@ -63,32 +63,31 @@ REALM_NAME=          # Ej: JokerRealm
 IP_LANS=             # Ej: 192.168.0.10,192.168.0.11
 ```
 
-4. **ConstruÌ y ejecut· el contenedor:**
+4. **Constru√≠ y ejecut√° el contenedor:**
 
 ```bash
 docker compose up --build -d
 ```
 
-> Nota: Este repositorio contiene archivos requeridos para que el contenedor funcione correctamente. **Clonarlo es obligatorio**. Si us·s solo la imagen desde Docker Hub, debÈs montar los vol˙menes correspondientes, copiar los archivos necesarios y proporcionar un `.env` v·lido.
+> Nota: Este repositorio contiene archivos requeridos para que el contenedor funcione correctamente. **Clonarlo es obligatorio**. Si us√°s solo la imagen desde Docker Hub, deb√©s montar los vol√∫menes correspondientes, copiar los archivos necesarios y proporcionar un `.env` v√°lido.
 
 ---
 
 ## Docker Image disponible
 
-PodÈs usar la imagen si ya tenÈs los archivos locales configurados:
+Pod√©s usar la imagen si ya ten√©s los archivos locales configurados:
 
 ```bash
 docker pull gonzacass/diablo2-full:1.0
 ```
 
-> Requiere montar archivos desde el repo original. No funciona por sÌ sola sin `.env`, scripts ni configuraciones.
+> Requiere montar archivos desde el repo original. No funciona por s√≠ sola sin `.env`, scripts ni configuraciones.
 
 ---
 
 ## Agradecimientos
 
-Este proyecto est· basado e inspirado en el trabajo original de [**espenmjos**](https://github.com/espenmjos), quien creÛ una de las primeras im·genes funcionales de Docker que combinan PvPGN y D2GS para Diablo II. °Gracias por mantener viva la llama de Lut Gholein!
-
+Este proyecto est√° basado e inspirado en el trabajo original de [**espenmjos**](https://github.com/espenmjos), quien cre√≥ una de las primeras im√°genes funcionales de Docker que combinan PvPGN y D2GS para Diablo II.
 ---
 
 ## Licencia
