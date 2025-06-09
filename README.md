@@ -36,6 +36,7 @@ Ideal para LAN parties, servidores privados entre amigos, o simplemente para rev
 ```bash
 git clone https://github.com/gonzacass/diablo2-server.git
 cd diablo2-server
+mkdir {etc,var}
 ```
 
 2. **Creá tu archivo `.env` desde el ejemplo:**
@@ -134,6 +135,7 @@ Perfect for LAN parties, private games with friends, or simply reliving the glor
 ```bash
 git clone https://github.com/gonzacass/diablo2-server.git
 cd diablo2-server
+mkdir {etc,var}
 ```
 
 2. **Create your `.env` file from the example:**
