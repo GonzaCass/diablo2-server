@@ -1,7 +1,0 @@
-*.log
-*.pid
-*.db
-.env
-.env.*
-tmp/
-root/.wine/drive_c/d2gs/*.log
