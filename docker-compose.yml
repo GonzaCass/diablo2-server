@@ -1,8 +1,7 @@
 services:
   diablo2:
     container_name: diablo2-server
-    build: .
-    image: diablo2-full:1.0
+    image: gonzacass/diablo2-full:1.0
     network_mode: host
     restart: unless-stopped
     entrypoint: ["/bin/bash", "/start.sh"]

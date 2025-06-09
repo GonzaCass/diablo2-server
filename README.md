@@ -73,7 +73,7 @@ docker compose up --build -d
 
 ---
 
-## Imagen Docker disponible
+## Docker Image disponible
 
 Podés usar la imagen si ya tenés los archivos locales configurados:
 
